@@ -10,8 +10,8 @@ const todoReducer = (state, action) => {
     case 'CREATE':
       return state.concat(action.todo);
     case 'TOGGLE':
-      console.log('----------Reducer State----------');
-      console.log(state);
+      // console.log('----------Reducer State----------');
+      // console.log(state);
       return state.map(todo => (todo.id === action.id ? { ...todo, done: !todo.done } : todo));
     case 'REMOVE':
       return state.filter(todo => todo.id !== action.id);
